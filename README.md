@@ -16,6 +16,10 @@ This repository contains important documents and web pages.
 You can view the HTML files in several ways:
 1. Direct GitHub view (code only)
 2. Download and open locally in your browser
-3. Through GitHub Pages (if enabled)
+3. **Live on GitHub Pages:** [https://tfa225.github.io/doc-diump/dennis-barton-sequential-plan.html](https://tfa225.github.io/doc-diump/dennis-barton-sequential-plan.html) (after the GitHub workflow completes)
+4. **Quick preview:** Use [HTMLPreview](https://htmlpreview.github.io/?https://github.com/tfa225/doc-diump/blob/main/dennis-barton-sequential-plan.html)
 
-For the best experience with interactive HTML files, please download and open them in your preferred web browser.
+## Recent Updates
+
+- Added hyperlinks to evidence screenshots in the Sequential Plan flowchart
+- Enabled GitHub Pages for easy viewing of HTML content with all interactive features

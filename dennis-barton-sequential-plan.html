@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connecting the Dots: Dennis Barton's Sequential Plan</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .flowchart {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .step {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #ecf0f1;
+            border-left: 4px solid #3498db;
+            position: relative;
+        }
+        
+        .arrow {
+            text-align: center;
+            font-size: 24px;
+            color: #7f8c8d;
+            margin: 5px 0;
+        }
+        
+        .disruption {
+            background-color: #ffe6e6;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .reaction {
+            background-color: #fff5e6;
+            border-left: 4px solid #f39c12;
+        }
+        
+        .result {
+            background-color: #e6ffe6;
+            border-left: 4px solid #2ecc71;
+        }
+        
+        .crimes {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .person {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .person h3 {
+            margin-top: 0;
+            color: #34495e;
+            border-bottom: 1px solid #bdc3c7;
+            padding-bottom: 5px;
+        }
+        
+        .timeline {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .month {
+            margin-bottom: 25px;
+        }
+        
+        .month-header {
+            background-color: #3498db;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        
+        .event {
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-left: 3px solid #7f8c8d;
+            position: relative;
+        }
+        
+        .date {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .nav-tabs {
+            display: flex;
+            background-color: #34495e;
+            border-radius: 8px 8px 0 0;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        
+        .tab {
+            padding: 12px 20px;
+            cursor: pointer;
+            color: #ecf0f1;
+            text-align: center;
+            flex-grow: 1;
+            transition: background-color 0.3s;
+        }
+        
+        .tab:hover {
+            background-color: #2c3e50;
+        }
+        
+        .tab.active {
+            background-color: #3498db;
+            font-weight: bold;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .speculation {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            border-left: 4px solid #9b59b6;
+        }
+        
+        .speculation h2 {
+            color: #9b59b6;
+        }
+        
+        ol {
+            padding-left: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .nav-tabs {
+                flex-direction: column;
+                border-radius: 8px;
+            }
+            
+            .tab {
+                border-bottom: 1px solid #2c3e50;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Connecting the Dots: Dennis Barton's Sequential Plan</h1>
+    
+    <div class="nav-tabs">
+        <div class="tab active" onclick="openTab('flowchart')">Flowchart</div>
+        <div class="tab" onclick="openTab('crimes')">Potential Crimes</div>
+        <div class="tab" onclick="openTab('speculation')">Speculation</div>
+        <div class="tab" onclick="openTab('timeline')">Complete Timeline</div>
+    </div>
+    
+    <div id="flowchart" class="tab-content active">
+        <div class="flowchart">
+            <h2>Sequential Plan Flowchart</h2>
+            
+            <div class="step">
+                <strong>December 2024</strong><br>
+                1. Nora Breen and her lawyer create an interim AVO against me in Dec 2024.
+            </div>
+            
+            <div class="arrow">↓</div>
+            
+            <div class="step">
+                2. I contact Macquarie University the same day via email expressing my frustration with their employee.
+            </div>
+            
+            <div class="arrow">↓</div>
+            
+            <div class="step">
+                <strong>February 2025</strong><br>
+                3. Dennis Barton contacts Nora Breen because the April 7 NCAT hearing approaching. Nora Breen assisted Dennis Barton to successfully dismiss the previous hearing I attempted to organize with NCAT to prevent further financial exploitation of my disabled mother.
+            </div>
+            
+            <div class="arrow">↓</div>
+            
+            <div class="step">
+                4. Nora Breen provides Dennis Barton with information surrounding the December 2024 interim AVO and gives Dennis Barton her lawyer's contact information.
+            </div>
+            
+            <div class="arrow">↓</div>
+            
+            <div class="step">
+                5. Dennis Barton contacts Nora Breen's lawyer and they have a conversation.
+            </div>
+            
+            <div class="arrow">↓</div>
+            
+            <div class="step">
+                6. Dennis Barton reveals the conversation in an email to my mother. The Feb 6 email revealed he had a plan to make me an "unfit person" and related costs to implement.
+            </div>
+            
+            <div class="arrow">↓</div>
+            
+            <div class="step disruption">
+                7. <strong>DISRUPTION:</strong> I unexpectedly discover Dennis Barton's email and immediately notify NCAT on February 13th.
+            </div>
+            
+            <div class="arrow">↓</div>
+            
+            <div class="step reaction">
+                8. <strong>REACTION:</strong> Dennis Barton contacts Nora Breen's lawyer to initiate the plan.
+            </div>
+            
+            <div class="arrow">↓</div>
+            
+            <div class="step">
+                9. Nora Breen's lawyer contacts Officer Jack Maguire reporting my email to Macquarie University complaining about their employee, which was subsequently forwarded to Nora Breen, as a breach of Nora Breen's interim AVO.
+            </div>
+            
+            <div class="arrow">↓</div>
+            
+            <div class="step">
+                10. Jack Maguire creates criminal charges for me based on Nora Breen's lawyer's complaint.
+            </div>
+            
+            <div class="arrow">↓</div>
+            
+            <div class="step">
+                <strong>March and April</strong><br>
+                11. Nora Breen's lawyer successfully delays and confuses the legal process on multiple occasions through December 2025.
+            </div>
+            
+            <div class="arrow">↓</div>
+            
+            <div class="step result">
+                12. <strong>RESULT:</strong> Dennis Barton successfully implemented his plan to create criminal charges as a way to argue I'm not a fit and proper person for the April 7 hearing.
+            </div>
+        </div>
+    </div>
+    
+    <div id="crimes" class="tab-content">
+        <div class="crimes">
+            <h2>Potential Criminal Violations</h2>
+            
+            <div class="person">
+                <h3>Nora Breen</h3>
+                <strong>Crimes (Domestic and Personal Violence) Act 2007</strong>
+                <p><strong>Section 49: False or Misleading Statements</strong></p>
+                <ul>
+                    <li>Making false statements in AVO application</li>
+                    <li><strong>Maximum Penalty:</strong> 100 penalty units or 12 months imprisonment, or both</li>
+                    <li><strong>Evidence:</strong> Nora Breen could have withdrawn her application for AVO which would have foiled Dennis Barton's plan to give me false criminal charges.</li>
+                </ul>
+            </div>
+            
+            <div class="person">
+                <h3>Nora Breen's Lawyer</h3>
+                <strong>Crimes Act 1900 (NSW)</strong>
+                <p><strong>Section 319: Perverting the Course of Justice</strong></p>
+                <ul>
+                    <li>Acting with intent to pervert the course of justice</li>
+                    <li><strong>Maximum Penalty:</strong> 14 years imprisonment</li>
+                    <li><strong>Evidence:</strong> Utilized intimate knowledge of the criminal justice system to successfully frustrate the process</li>
+                </ul>
+                
+                <p><strong>Section 49: False or Misleading Statements</strong></p>
+                <ul>
+                    <li>Knowingly making false statements in AVO proceedings</li>
+                    <li><strong>Maximum Penalty:</strong> 100 penalty units or 12 months imprisonment, or both</li>
+                    <li><strong>Evidence:</strong> Misuse of the criminal justice system to create false criminal charges against me</li>
+                </ul>
+                
+                <p><strong>Section 93T: Participation in Criminal Group</strong></p>
+                <ul>
+                    <li>Participating in criminal group (2 or more)</li>
+                    <li><strong>Maximum Penalty:</strong> 5 years imprisonment (10 years if directing activities)</li>
+                    <li><strong>Evidence:</strong> Coordination with Dennis Barton to implement a plan to create false criminal charges to influence Dennis Barton's April 7 NCAT hearing</li>
+                </ul>
+            </div>
+            
+            <div class="person">
+                <h3>Dennis Barton</h3>
+                <strong>Crimes Act 1900 (NSW)</strong>
+                <p><strong>Section 192E: Fraud</strong></p>
+                <ul>
+                    <li>Dishonestly obtaining financial advantage by deception</li>
+                    <li><strong>Maximum Penalty:</strong> 10 years imprisonment</li>
+                    <li><strong>Evidence:</strong> $25,000 fee agreement with vague services to person with documented cognitive impairment</li>
+                </ul>
+                
+                <p><strong>Section 178BA: Obtaining Money by Deception</strong></p>
+                <ul>
+                    <li>Obtaining money from vulnerable person through deceptive means</li>
+                    <li><strong>Maximum Penalty:</strong> 5 years imprisonment</li>
+                    <li><strong>Evidence:</strong> Fee agreement with minimal service description despite substantial cost</li>
+                </ul>
+                
+                <p><strong>Section 319: Perverting the Course of Justice</strong></p>
+                <ul>
+                    <li>Acting with intent to pervert the course of justice</li>
+                    <li><strong>Maximum Penalty:</strong> 14 years imprisonment</li>
+                    <li><strong>Evidence:</strong> February 6 email explicitly stating intention to make me an "unfit" person to prejudice a NCAT hearing</li>
+                </ul>
+                
+                <p><strong>Section 93T: Participation in Criminal Group</strong></p>
+                <ul>
+                    <li>Participating in criminal group (2 or more)</li>
+                    <li><strong>Maximum Penalty:</strong> 5 years imprisonment (10 years if directing activities)</li>
+                    <li><strong>Evidence:</strong> Coordination with Nora Breen's lawyer to implement plan stated in February 6 email which led to the creation of false criminal charges being filed against me</li>
+                </ul>
+            </div>
+            
+            <div class="person">
+                <h3>Jack Maguire</h3>
+                <p>None!</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="speculation" class="tab-content">
+        <div class="speculation">
+            <h2>Speculation</h2>
+            <ol>
+                <li>Given the amount of money Dennis Barton was requesting to achieve his plan.</li>
+                <li>The small amount of work he has contributed to the hearing April 7 hearing.</li>
+                <li>The large amount of work Nora Breen's lawyer has performed before the April 7 hearing.</li>
+            </ol>
+            <p>It's reasonable to conclude that Dennis Barton is paying Dr. Nora Breen's legal expenses with her disabled patient's money to create false criminal charges against her patient's son.</p>
+        </div>
+    </div>
+    
+    <div id="timeline" class="tab-content">
+        <div class="timeline">
+            <h2>Complete Timeline of Events</h2>
+            
+            <div class="month">
+                <div class="month-header">June 2024</div>
+                
+                <div class="event">
+                    <div class="date">June 13, 2024</div>
+                    <ul>
+                        <li>Nora Breen of Macquarie University prepared a neuropsychological report on my mother assessing her mental capacity at Dennis Barton's request</li>
+                        <li>Dennis Barton is a lawyer who claims to represent my mother who suffers from serious Alzheimer's</li>
+                        <li>In this report, Nora Breen falsely stated I had two existing AVOs when in fact there were none</li>
+                        <li>Breen's report was presented to the member at my second attempt with NCAT to protect my vulnerable mother from financial exploitation</li>
+                        <li>Remember cited Nora Breen's report as the reason for dismissal of the second hearing with NCAT</li>
+                        <li>Nora Breen's report has enabled Dennis Barton to continue to financially exploit my vulnerable mother</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="month">
+                <div class="month-header">December 2024</div>
+                
+                <div class="event">
+                    <div class="date">December 19, 2024</div>
+                    <ul>
+                        <li>I attended Local Court because Nora Breen submitted an AVO application against me. It was a confusing situation because it wasn't a criminal matter listed for prosecution</li>
+                        <li>A solicitor addressed the court wishing to speak to me, introducing herself as a duty solicitor (legal aid)</li>
+                        <li>Outside, she tried to pressure me to plead guilty to Nora Breen's AVO request</li>
+                        <li>I refused, explaining on principle I wouldn't plead guilty to something I did not commit</li>
+                        <li>In the hearing room, this same woman announced to the member that she was Nora Breen's attorney</li>
+                        <li>We returned to the court and the separate hearing was created in another room for Nora Breen's AVO request</li>
+                        <li>The magistrate asked both parties to explain their positions; Breen claimed she and the "entire university campus felt terrified"</li>
+                        <li>I argued there was never any threat of violence and this court action was completely unnecessary</li>
+                        <li>The magistrate granted an interim AVO to Nora Breen requiring her to present evidence on March 12, 2025</li>
+                        <li>Frustrated after wasting half a day in court, I emailed Macquarie University Health to inform them they were never in any physical danger</li>
+                        <li>Note: Nora Breen was NOT included in this email, which would have breached the interim AVO issued the same day</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="month">
+                <div class="month-header">February 2025</div>
+                
+                <div class="event">
+                    <div class="date">February 13, 2025</div>
+                    <ul>
+                        <li>I discovered an email from February 6th by Dennis Barton (who claims to legally represent my mother - Nora Breen's patient)</li>
+                        <li>The email outlined Barton's plan to force me to withdraw my NCAT application or "deter me from making any further application"</li>
+                        <li>Barton also proposed having NCAT declare me "not a fit person"</li>
+                        <li>The email included a massive $25,000 fee agreement with vague service descriptions costing $600+ per hour</li>
+                        <li>I immediately warned NCAT of Barton's intentions to taint third NCAT hearing scheduled for April 7, 2025 and requested a case manager to protect its integrity</li>
+                        <li>Four days later, on February 17th, Officer Jack Maguire of Surry Hills police created a document stating I breached Nora Breen's December 2024 interim AVO</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="month">
+                <div class="month-header">March 2025</div>
+                
+                <div class="event">
+                    <div class="date">March 12, 2025</div>
+                    <ul>
+                        <li>Not having received any criminal paperwork, I sought advice from Legal Aid who directed me to my assigned court</li>
+                        <li>Upon arrival, I was identified and the police served with papers claiming I had breached Breen's interim AVO created in December 2019!</li>
+                        <li>Nora Breen's lawyer (the same one from December) was present with the police appeared and argued Nora Breen's interim AVO should be granted because of Jack Maguire's accusations</li>
+                        <li>I became frustrated as I wanted to challenge Jack Maguire's absurd accusations here and now</li>
+                        <li>The magistrate refused, stating I needed 14 days to prepare against Constable Maguire's "new" allegations, which were actually created back on February 17th</li>
+                        <li>The magistrate ordered a hearing for March 28th to respond to Jack Maguire's allegations against me</li>
+                    </ul>
+                </div>
+                
+                <div class="event">
+                    <div class="date">March 28, 2025</div>
+                    <ul>
+                        <li>I attended court as scheduled and again Nora Breen's lawyer was present with the police and prosecution</li>
+                        <li>Just as proceedings were about to start, she hyperventilated, causing the court to go into recess</li>
+                        <li>When we returned, Nora Breen's lawyer stated the police were now going to prosecute the interim AVO Nora Breen created in December 2024</li>
+                        <li>Because of this, the magistrate ruled the hearing was to be deferred until April 2</li>
+                        <li>I became very frustrated and protested as I had come prepared to defend myself against Jack Maguire's allegations presented to me two weeks prior</li>
+                        <li>The magistrate ordered a duty solicitor (what Nora Breen's lawyer claimed to be back in December 2024) into the court to educate me about the process</li>
+                        <li>In the duty solicitor's office, I inquired why this process had been so chaotic; he looked into the court systems and printed out the multiple criminal accusations being created against me</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="month">
+                <div class="month-header">April 2025</div>
+                
+                <div class="event">
+                    <div class="date">April 2, 2025</div>
+                    <ul>
+                        <li>I attended court believing things would conclude as it was the official date listed on Jack Maguire's accusations</li>
+                        <li>Instead, I was told they needed to set a magistrate and hearing date</li>
+                        <li>I became upset because I thought this matter would finally conclude this matter which I've been dragged into court a total of 4 times since 19 December 2024</li>
+                        <li>Despite my objections, the matter was deferred to be heard December 12, 2025, close to a year anniversary of Nora Breen's December 2024 interim AVO</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function openTab(tabName) {
+            // Hide all tab contents
+            var tabContents = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
+            
+            // Remove active class from all tabs
+            var tabs = document.getElementsByClassName("tab");
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove("active");
+            }
+            
+            // Show the selected tab content and mark the tab as active
+            document.getElementById(tabName).classList.add("active");
+            
+            // Find and mark the clicked tab as active
+            var tabs = document.getElementsByClassName("tab");
+            for (var i = 0; i < tabs.length; i++) {
+                if (tabs[i].textContent.toLowerCase().includes(tabName.toLowerCase())) {
+                    tabs[i].classList.add("active");
+                    break;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

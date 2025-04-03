@@ -171,6 +171,43 @@
             padding-left: 20px;
         }
         
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
+        }
+        
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            margin-top: 2%;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .evidence-link {
+            color: #3498db;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        
         @media (max-width: 768px) {
             body {
                 padding: 10px;
@@ -183,6 +220,10 @@
             
             .tab {
                 border-bottom: 1px solid #2c3e50;
+            }
+            
+            .modal-content {
+                width: 95%;
             }
         }
     </style>
@@ -197,26 +238,32 @@
         <div class="tab" onclick="openTab('timeline')">Complete Timeline</div>
     </div>
     
+    <!-- Modal for displaying images -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+    
     <div id="flowchart" class="tab-content active">
         <div class="flowchart">
             <h2>Sequential Plan Flowchart</h2>
             
             <div class="step">
                 <strong>December 2024</strong><br>
-                1. Nora Breen and her lawyer <a href="https://solicitor-fox-staniland-elder-abusers-gordon.net/wp-content/uploads/2025/04/Screenshot-2025-04-03-153528.jpg" target="_blank">create an interim AVO</a> against me in Dec 2024.
+                1. Nora Breen and her lawyer <span class="evidence-link" onclick="showImage('https://solicitor-fox-staniland-elder-abusers-gordon.net/wp-content/uploads/2025/04/Screenshot-2025-04-03-153528.jpg')">create an interim AVO</span> against me in Dec 2024.
             </div>
             
             <div class="arrow">↓</div>
             
             <div class="step">
-                2. <a href="https://solicitor-fox-staniland-elder-abusers-gordon.net/wp-content/uploads/2025/04/Screenshot-2025-04-03-154000.jpg" target="_blank">I contact Macquarie University the same day</a> via email expressing my frustration with their employee.
+                2. <span class="evidence-link" onclick="showImage('https://solicitor-fox-staniland-elder-abusers-gordon.net/wp-content/uploads/2025/04/Screenshot-2025-04-03-154000.jpg')">I contact Macquarie University the same day</span> via email expressing my frustration with their employee.
             </div>
             
             <div class="arrow">↓</div>
             
             <div class="step">
                 <strong>February 2025</strong><br>
-                3. Dennis Barton contacts Nora Breen because the April 7 NCAT hearing approaching. Nora Breen assisted Dennis Barton to <a href="https://solicitor-fox-staniland-elder-abusers-gordon.net/wp-content/uploads/2025/04/Screenshot-2025-04-03-154234.jpg" target="_blank">successfully dismiss the previous hearing</a> I attempted to organize with NCAT to prevent further financial exploitation of my disabled mother.
+                3. Dennis Barton contacts Nora Breen because the April 7 NCAT hearing approaching. Nora Breen assisted Dennis Barton to <span class="evidence-link" onclick="showImage('https://solicitor-fox-staniland-elder-abusers-gordon.net/wp-content/uploads/2025/04/Screenshot-2025-04-03-154234.jpg')">successfully dismiss the previous hearing</span> I attempted to organize with NCAT to prevent further financial exploitation of my disabled mother.
             </div>
             
             <div class="arrow">↓</div>
@@ -234,13 +281,13 @@
             <div class="arrow">↓</div>
             
             <div class="step">
-                6. Dennis Barton reveals the conversation in an email to my mother. The Feb 6 email revealed he had a plan to make me an <a href="https://solicitor-fox-staniland-elder-abusers-gordon.net/wp-content/uploads/2025/04/Screenshot-2025-04-03-154759.jpg" target="_blank">"unfit person"</a> and related <a href="https://solicitor-fox-staniland-elder-abusers-gordon.net/wp-content/uploads/2025/04/Screenshot-2025-04-03-155014.jpg" target="_blank">costs to implement</a>.
+                6. Dennis Barton reveals the conversation in an email to my mother. The Feb 6 email revealed he had a plan to make me an <span class="evidence-link" onclick="showImage('https://solicitor-fox-staniland-elder-abusers-gordon.net/wp-content/uploads/2025/04/Screenshot-2025-04-03-154759.jpg')">"unfit person"</span> and related <span class="evidence-link" onclick="showImage('https://solicitor-fox-staniland-elder-abusers-gordon.net/wp-content/uploads/2025/04/Screenshot-2025-04-03-155014.jpg')">costs to implement</span>.
             </div>
             
             <div class="arrow">↓</div>
             
             <div class="step disruption">
-                7. <strong>DISRUPTION:</strong> I unexpectedly discover Dennis Barton's email and <a href="https://solicitor-fox-staniland-elder-abusers-gordon.net/wp-content/uploads/2025/04/Screenshot-2025-04-03-155319.jpg" target="_blank">immediately notify NCAT</a> on February 13th.
+                7. <strong>DISRUPTION:</strong> I unexpectedly discover Dennis Barton's email and <span class="evidence-link" onclick="showImage('https://solicitor-fox-staniland-elder-abusers-gordon.net/wp-content/uploads/2025/04/Screenshot-2025-04-03-155319.jpg')">immediately notify NCAT</span> on February 13th.
             </div>
             
             <div class="arrow">↓</div>
@@ -258,20 +305,20 @@
             <div class="arrow">↓</div>
             
             <div class="step">
-                10. Jack Maguire creates criminal charges for me based on <a href="https://solicitor-fox-staniland-elder-abusers-gordon.net/wp-content/uploads/2025/04/Screenshot-2025-04-03-160000.jpg" target="_blank">Nora Breen's lawyer's complaint</a>.
+                10. Jack Maguire creates criminal charges for me based on <span class="evidence-link" onclick="showImage('https://solicitor-fox-staniland-elder-abusers-gordon.net/wp-content/uploads/2025/04/Screenshot-2025-04-03-160000.jpg')">Nora Breen's lawyer's complaint</span>.
             </div>
             
             <div class="arrow">↓</div>
             
             <div class="step">
                 <strong>March and April</strong><br>
-                11. Nora Breen's lawyer successfully <a href="https://solicitor-fox-staniland-elder-abusers-gordon.net/wp-content/uploads/2025/04/Screenshot-2025-04-03-160702.jpg" target="_blank">delays and confuses</a> the legal process on multiple occasions through December 2025.
+                11. Nora Breen's lawyer successfully <span class="evidence-link" onclick="showImage('https://solicitor-fox-staniland-elder-abusers-gordon.net/wp-content/uploads/2025/04/Screenshot-2025-04-03-160702.jpg')">delays and confuses</span> the legal process on multiple occasions through December 2025.
             </div>
             
             <div class="arrow">↓</div>
             
             <div class="step result">
-                12. <strong>RESULT:</strong> Dennis Barton successfully implemented his plan to <a href="https://solicitor-fox-staniland-elder-abusers-gordon.net/wp-content/uploads/2025/04/Screenshot-2025-04-03-161238.jpg" target="_blank">create criminal charges</a> as a way to argue I'm <a href="https://solicitor-fox-staniland-elder-abusers-gordon.net/wp-content/uploads/2025/04/Screenshot-2025-04-03-161027.jpg" target="_blank">not a fit and proper person for the April 7 hearing</a>.
+                12. <strong>RESULT:</strong> Dennis Barton successfully implemented his plan to <span class="evidence-link" onclick="showImage('https://solicitor-fox-staniland-elder-abusers-gordon.net/wp-content/uploads/2025/04/Screenshot-2025-04-03-161238.jpg')">create criminal charges</span> as a way to argue I'm <span class="evidence-link" onclick="showImage('https://solicitor-fox-staniland-elder-abusers-gordon.net/wp-content/uploads/2025/04/Screenshot-2025-04-03-161027.jpg')">not a fit and proper person for the April 7 hearing</span>.
             </div>
         </div>
     </div>
@@ -470,6 +517,7 @@
     </div>
     
     <script>
+        // For tab switching
         function openTab(tabName) {
             // Hide all tab contents
             var tabContents = document.getElementsByClassName("tab-content");
@@ -495,6 +543,33 @@
                 }
             }
         }
+        
+        // For modal image display
+        var modal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("modalImage");
+        
+        function showImage(imgSrc) {
+            modal.style.display = "block";
+            modalImg.src = imgSrc;
+        }
+        
+        function closeModal() {
+            modal.style.display = "none";
+        }
+        
+        // Close the modal when clicking outside of the image
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+        
+        // Close the modal when pressing the Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                closeModal();
+            }
+        });
     </script>
 </body>
 </html>
